@@ -15,9 +15,8 @@ import (
 func main() {
 	// Set up the context and client for the Speech-to-Text API.
 	ctx := context.Background()
-	//apiKey := os.Getenv("GOOGLE_API_KEY")
-	apiT := "AIzaSyDSM0gC_T_lsklFaKX8q3KLuiBwYFDZ-eU"
-	client, err := speech.NewClient(ctx, option.WithAPIKey(apiT))
+	apiKey := os.Getenv("GOOGLE_API_KEY")
+	client, err := speech.NewClient(ctx, option.WithAPIKey(apiKey))
 	if err != nil {
 		log.Fatal(err)
 	}
